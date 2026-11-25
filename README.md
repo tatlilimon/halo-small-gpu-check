@@ -141,7 +141,7 @@ uv run python report.py                          # the tables above
 
 `uv run modal run modal_app.py --only qlora_a10,qlora_h100` runs a subset; the names are the keys of `RUNS` in `modal_app.py`.
 
-The first run of a pass downloads the model and the dataset to a Modal volume. The other runs then start at most eight at a time, because Modal's Starter plan allows ten GPUs at once. The first pass was made before that limit was added and started all of them together. A pass took 28 to 29 minutes, and the second pass cost $3.50 according to `modal billing summary`.
+The first run of a pass downloads the model and the dataset to a Modal volume. The other runs then start at most eight at a time, because Modal's Starter plan allows ten GPUs at once. The first pass was made before that limit was added and started all of them together. The two passes took 29 and 28 minutes and cost $2.99 and $2.94 according to `modal billing report`.
 
 The logs in `results/` are the output of `halo launch` with em dashes and en dashes replaced by hyphens.
 
