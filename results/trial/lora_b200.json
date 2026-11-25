@@ -1,0 +1,13 @@
+{
+  "requested_gpu": "B200",
+  "image": "blackwell-1.3.0rc1",
+  "recipe": "lora",
+  "arguments": "",
+  "gpu": "NVIDIA B200, 183359 MiB, 620.70.06",
+  "command": "halo launch sft examples/sft/qwen3/qwen3-4b-ultrachat-lora.yaml --output_dir=/tmp/run --max_steps=6 --save_strategy=no --eval_strategy=no --report_to=none --logging_steps=1 --enable_efficiency_metrics=true --dataset_ratio=0.02",
+  "exit_code": 0,
+  "snapshots": [
+    "datasets--HuggingFaceH4--ultrachat_200k/snapshots/8049631c405ae6576f93f445c6b8166f76f5505a",
+    "models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554"
+  ]
+}

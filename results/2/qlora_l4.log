@@ -1,0 +1,860 @@
+11/25/2026 17:50:48 - INFO - halo.runtime.filesystem - Shared-filesystem scope: {'DIST_SHARED_FILESYSTEM': 'shared', 'DIST_INPUT_SHARED_FILESYSTEM': 'shared', 'DIST_OUTPUT_SHARED_FILESYSTEM': 'shared'} (set DIST_SHARED_FILESYSTEM=0 for per-node local storage).
+[INFO|configuration_utils.py:1018] 2026-11-25 17:50:48,205 >> loading configuration file config.json from cache at /vol/hf/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554/config.json
+[INFO|configuration_utils.py:1090] 2026-11-25 17:50:48,207 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 262144,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 5000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.20.2",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+[INFO|configuration_utils.py:1018] 2026-11-25 17:50:48,320 >> loading configuration file config.json from cache at /vol/hf/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554/config.json
+[INFO|configuration_utils.py:1090] 2026-11-25 17:50:48,322 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 262144,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 5000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.20.2",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+11/25/2026 17:50:48 - INFO - halo.distributed.parallelism_config - ============================================================
+PARALLELISM: DATA PARALLEL
+  World: 1 (1 nodes × 1 GPUs)
+  Data parallel: 1 distinct batches
+  Gradient sync: 1 ranks
+============================================================
+11/25/2026 17:50:48 - INFO - halo.data.pipeline.coordinated_map - [loading dataset HuggingFaceH4/ultrachat_200k@train_sft] Main (rank 0)...
+11/25/2026 17:50:48 - INFO - halo.data.sources.loading - Loading dataset from HuggingFace Hub: HuggingFaceH4/ultrachat_200k (split=train_sft)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+11/25/2026 17:50:48 - WARNING - huggingface_hub.utils._http - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+11/25/2026 17:50:50 - INFO - halo.data.pipeline.coordinated_map - [loading dataset HuggingFaceH4/ultrachat_200k@train_sft] Main (rank 0) completed
+11/25/2026 17:50:50 - INFO - halo.data.pipeline.coordinated_map - [filter operation (filtering empty messages (train))] Main (rank 0)...
+11/25/2026 17:50:50 - INFO - halo.data.pipeline.coordinated_map - [filter operation (filtering empty messages (train))] Main (rank 0) completed
+11/25/2026 17:50:50 - INFO - halo.data.pipeline.coordinated_map - [filter operation (filtering empty messages (test))] Main (rank 0)...
+11/25/2026 17:50:50 - INFO - halo.data.pipeline.coordinated_map - [filter operation (filtering empty messages (test))] Main (rank 0) completed
+11/25/2026 17:50:50 - INFO - halo.data.sources.corpus - Normalizing dataset schemas before concatenation...
+11/25/2026 17:50:50 - INFO - halo.data.sources.corpus - Concatenating 1 training datasets
+11/25/2026 17:50:50 - INFO - halo.data.sources.corpus - Concatenating 1 test datasets
+11/25/2026 17:50:50 - INFO - halo.data.sources.loading - Training data after schema normalization: 4115
+11/25/2026 17:50:50 - INFO - halo.data.sources.loading - Columns in training dataset: ['prompt', 'prompt_id', 'messages']
+11/25/2026 17:50:50 - INFO - halo.data.sources.loading - Test data after schema normalization: 41
+11/25/2026 17:50:50 - INFO - halo.data.sources.loading - Columns in test dataset: ['prompt', 'prompt_id', 'messages']
+[INFO|configuration_utils.py:1018] 2026-11-25 17:50:50,477 >> loading configuration file config.json from cache at /vol/hf/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554/config.json
+[INFO|configuration_utils.py:1090] 2026-11-25 17:50:50,479 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 262144,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 5000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.20.2",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]
+Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 919.93it/s]
+[INFO|configuration_utils.py:1018] 2026-11-25 17:50:50,609 >> loading configuration file config.json from cache at /vol/hf/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554/config.json
+[INFO|configuration_utils.py:1090] 2026-11-25 17:50:50,611 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 262144,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 5000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.20.2",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+11/25/2026 17:50:50 - INFO - halo.models.attention.selection - flash_attention_2 is this GPU's flash backend; model-level checks may move a model off it.
+11/25/2026 17:50:50 - INFO - halo.model_loading.liger.dispatch - Applying Liger Kernel for qwen3: {'rope': True, 'cross_entropy': True, 'fused_linear_cross_entropy': False, 'rms_norm': True, 'swiglu': True}
+11/25/2026 17:50:50 - INFO - halo.model_loading.liger.dispatch - ✓ Liger Kernel applied for qwen3
+[INFO|configuration_utils.py:1018] 2026-11-25 17:50:50,617 >> loading configuration file config.json from cache at /vol/hf/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554/config.json
+[INFO|configuration_utils.py:1090] 2026-11-25 17:50:50,619 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 262144,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": null,
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 5000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.20.2",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+11/25/2026 17:50:52 - INFO - halo.model_loading.parallel.loader - Using quantization config: BitsAndBytesConfig {
+  "_load_in_4bit": true,
+  "_load_in_8bit": false,
+  "bnb_4bit_compute_dtype": "bfloat16",
+  "bnb_4bit_quant_storage": "uint8",
+  "bnb_4bit_quant_type": "nf4",
+  "bnb_4bit_use_double_quant": true,
+  "llm_int8_enable_fp32_cpu_offload": false,
+  "llm_int8_has_fp16_weight": false,
+  "llm_int8_skip_modules": null,
+  "llm_int8_threshold": 6.0,
+  "load_in_4bit": true,
+  "load_in_8bit": false,
+  "quant_method": "bitsandbytes"
+}
+
+[INFO|modeling_utils.py:764] 2026-11-25 17:50:52,079 >> loading weights file model.safetensors from cache at /vol/hf/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554/model.safetensors.index.json
+[INFO|configuration_utils.py:1156] 2026-11-25 17:50:52,088 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "use_cache": true
+}
+
+
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/398 [00:00<03:26,  1.93it/s]/usr/local/lib/python3.12/dist-packages/bitsandbytes/backends/cuda/ops.py:213: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  torch._check_is_size(blocksize)
+
+Loading weights:   1%|          | 3/398 [00:00<01:13,  5.40it/s]
+Loading weights:   3%|▎         | 11/398 [00:00<00:18, 21.34it/s]
+Loading weights:   5%|▍         | 19/398 [00:00<00:10, 34.99it/s]
+Loading weights:   7%|▋         | 26/398 [00:01<00:09, 40.15it/s]
+Loading weights:   9%|▉         | 36/398 [00:01<00:06, 54.72it/s]
+Loading weights:  12%|█▏        | 47/398 [00:01<00:05, 64.13it/s]
+Loading weights:  15%|█▍        | 58/398 [00:01<00:04, 70.68it/s]
+Loading weights:  17%|█▋        | 69/398 [00:01<00:04, 75.30it/s]
+Loading weights:  20%|██        | 80/398 [00:01<00:04, 78.15it/s]
+Loading weights:  23%|██▎       | 91/398 [00:01<00:03, 80.95it/s]
+Loading weights:  26%|██▌       | 102/398 [00:01<00:03, 82.43it/s]
+Loading weights:  29%|██▊       | 114/398 [00:02<00:03, 84.58it/s]
+Loading weights:  31%|███▏      | 125/398 [00:02<00:03, 85.11it/s]
+Loading weights:  34%|███▍      | 136/398 [00:02<00:03, 85.54it/s]
+Loading weights:  37%|███▋      | 147/398 [00:02<00:02, 86.07it/s]
+Loading weights:  40%|███▉      | 158/398 [00:02<00:02, 85.84it/s]
+Loading weights:  42%|████▏     | 168/398 [00:02<00:02, 88.08it/s]
+Loading weights:  45%|████▌     | 180/398 [00:02<00:02, 89.75it/s]
+Loading weights:  48%|████▊     | 190/398 [00:02<00:02, 92.25it/s]
+Loading weights:  50%|█████     | 200/398 [00:02<00:02, 92.65it/s]
+Loading weights:  53%|█████▎    | 210/398 [00:03<00:02, 88.21it/s]
+Loading weights:  55%|█████▌    | 219/398 [00:03<00:02, 87.19it/s]
+Loading weights:  57%|█████▋    | 228/398 [00:03<00:02, 83.69it/s]
+Loading weights:  60%|█████▉    | 237/398 [00:03<00:02, 79.59it/s]
+Loading weights:  62%|██████▏   | 247/398 [00:03<00:01, 80.13it/s]
+Loading weights:  65%|██████▍   | 258/398 [00:03<00:01, 82.81it/s]
+Loading weights:  68%|██████▊   | 269/398 [00:03<00:01, 82.97it/s]
+Loading weights:  70%|███████   | 280/398 [00:03<00:01, 84.60it/s]
+Loading weights:  73%|███████▎  | 291/398 [00:04<00:01, 84.90it/s]
+Loading weights:  76%|███████▌  | 302/398 [00:04<00:01, 85.93it/s]
+Loading weights:  79%|███████▊  | 313/398 [00:04<00:00, 86.13it/s]
+Loading weights:  81%|████████  | 323/398 [00:04<00:00, 88.85it/s]
+Loading weights:  84%|████████▎ | 333/398 [00:04<00:00, 88.81it/s]
+Loading weights:  86%|████████▋ | 344/398 [00:04<00:00, 87.27it/s]
+Loading weights:  89%|████████▉ | 355/398 [00:04<00:00, 87.48it/s]
+Loading weights:  92%|█████████▏| 366/398 [00:04<00:00, 85.53it/s]
+Loading weights:  95%|█████████▍| 377/398 [00:05<00:00, 85.64it/s]
+Loading weights:  97%|█████████▋| 386/398 [00:05<00:00, 84.85it/s]
+Loading weights:  99%|█████████▉| 395/398 [00:05<00:00, 85.00it/s]
+Loading weights: 100%|██████████| 398/398 [00:05<00:00, 75.28it/s]
+[INFO|configuration_utils.py:1112] 2026-11-25 17:50:57,901 >> loading configuration file generation_config.json from cache at /vol/hf/hub/models--Qwen--Qwen3-4B-Instruct-2507/snapshots/cdbee75f17c01a7cc42f958dc650907174af0554/generation_config.json
+[INFO|configuration_utils.py:1156] 2026-11-25 17:50:57,902 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.7,
+  "top_k": 20,
+  "top_p": 0.8
+}
+
+11/25/2026 17:50:57 - INFO - halo.model_loading.buffer_repair - Fixed 1 rotary embedding inv_freq buffer(s) to float32
+11/25/2026 17:50:57 - INFO - halo.model_loading.parallel.loader - Model loaded with standard DDP
+11/25/2026 17:50:57 - INFO - halo.entrypoints.model_setup - Tokenizer: Qwen2Tokenizer(name_or_path='Qwen/Qwen3-4B-Instruct-2507', vocab_size=151643, model_max_length=4096, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>'}, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151657: AddedToken("<tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151658: AddedToken("</tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151659: AddedToken("<|fim_prefix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151660: AddedToken("<|fim_middle|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151661: AddedToken("<|fim_suffix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151662: AddedToken("<|fim_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151663: AddedToken("<|repo_name|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151664: AddedToken("<|file_sep|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151665: AddedToken("<tool_response>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151666: AddedToken("</tool_response>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151667: AddedToken("<think>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	151668: AddedToken("</think>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+})
+11/25/2026 17:50:57 - INFO - halo.entrypoints.model_setup - Model config: Qwen3Config {
+  "_halo_liger_applied_config": {
+    "cross_entropy": true,
+    "fused_linear_cross_entropy": false,
+    "rms_norm": true,
+    "rope": true,
+    "swiglu": true
+  },
+  "_halo_sinks_reset": true,
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 2560,
+  "initializer_range": 0.02,
+  "intermediate_size": 9728,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 262144,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": 151643,
+  "quantization_config": {
+    "_load_in_4bit": true,
+    "_load_in_8bit": false,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_quant_storage": "uint8",
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "llm_int8_enable_fp32_cpu_offload": false,
+    "llm_int8_has_fp16_weight": false,
+    "llm_int8_skip_modules": null,
+    "llm_int8_threshold": 6.0,
+    "load_in_4bit": true,
+    "load_in_8bit": false,
+    "quant_method": "bitsandbytes"
+  },
+  "rms_norm_eps": 1e-06,
+  "rope_parameters": {
+    "rope_theta": 5000000,
+    "rope_type": "default"
+  },
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "5.20.2",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+
+11/25/2026 17:50:57 - WARNING - halo.data.pipeline.map_cache_key - Dataset-map cache fingerprint for build_chat_row_processor.<locals>.process_row skips a value of type dict it cannot fingerprint - changes to that value will NOT invalidate the cache. If it affects the map output, thread it through cache_key_extras.
+11/25/2026 17:50:58 - INFO - halo.data.pipeline.coordinated_map - [map operation (Processing dataset)] Main (rank 0)...
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.coordinated_map - [map operation (Processing dataset)] Main (rank 0) completed
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.coordinated_map - [filter operation (filtering rejected input_ids)] Main (rank 0)...
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.coordinated_map - [filter operation (filtering rejected input_ids)] Main (rank 0) completed
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.rejected_rows - Filtered out 0/4156 examples (0.0%) rejected during processing (checked via input_ids)
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.coordinated_map - [packing the train split] Main (rank 0)...
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.coordinated_map - [packing the train split] Main (rank 0) completed
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.coordinated_map - [packing the eval split] Main (rank 0)...
+11/25/2026 17:51:01 - INFO - halo.data.pipeline.coordinated_map - [packing the eval split] Main (rank 0) completed
+11/25/2026 17:51:01 - INFO - halo.data.collators.factory - 📦 Using DataCollatorForCompletionOnlyLMWithPacking
+11/25/2026 17:51:01 - INFO - halo.entrypoints.data_setup - Example(s) from train dataset:
+11/25/2026 17:51:01 - INFO - halo.entrypoints.data_setup - {'input_ids': [151644, 872, 198, 7985, 264, 29263, 11514, 911, 264, 1293, 5558, 2948, 312, 3843, 287, 11, 21080, 389, 279, 11513, 323, 31016, 807, 3579, 438, 807, 1430, 311, 312, 15314, 273, 862, 5025, 13, 53704, 349, 5424, 315, 71830, 323, 80513, 11, 323, 990, 42020, 27787, 323, 10172, 533, 4128, 311, 1855, 264, 3746, 5530, 315, 16566, 323, 19671, 13, 21144, 23966, 21386, 1741, 438, 52050, 11, 55652, 11, 323, 279, 2355, 315, 2948, 311, 22279, 678, 31016, 13, 43610, 678, 11, 1281, 279, 5766, 323, 862, 11618, 2666, 13210, 323, 28622, 11, 13330, 12726, 304, 323, 10282, 1105, 16634, 3080, 279, 1602, 835, 13, 151645, 198, 151644, 77091, 198, 25020, 220, 16, 1365, 33099, 367, 271, 2132, 678, 6009, 389, 429, 282, 20840, 7324, 1899, 979, 1674, 3362, 5485, 279, 2948, 315, 1059, 2272, 369, 279, 1537, 882, 13, 2379, 1033, 1101, 36619, 1182, 1221, 11, 10199, 448, 18707, 323, 57422, 13, 1674, 3362, 1030, 1101, 32009, 1550, 2906, 11, 323, 41984, 572, 738, 311, 5274, 369, 7770, 382, 6865, 7391, 862, 2849, 23966, 279, 46867, 13, 2379, 1035, 2444, 304, 279, 27501, 315, 264, 4916, 323, 3061, 369, 4115, 911, 4297, 323, 4302, 11, 9963, 6078, 323, 21413, 279, 13943, 315, 57945, 382, 1925, 429, 3953, 1899, 11, 4764, 11, 279, 1879, 5497, 13, 41984, 594, 6562, 1030, 311, 3271, 11, 323, 566, 572, 311, 5274, 429, 1899, 369, 1661, 13, 1674, 3362, 6476, 1059, 4746, 557, 1650, 438, 1340, 15384, 1435, 31053, 304, 279, 6010, 11, 14063, 429, 862, 2948, 11, 773, 10526, 11, 1035, 614, 311, 2525, 311, 458, 835, 382, 25020, 220, 17, 1365, 37627, 1913, 1939, 2101, 3362, 1521, 1059, 1850, 311, 3271, 389, 13, 2932, 3937, 311, 7770, 11, 2684, 1059, 8381, 11, 323, 3855, 1059, 1828, 2562, 13, 2932, 29005, 1008, 2953, 11, 714, 6857, 3512, 16878, 705, 311, 41984, 382, 54419, 5823, 11, 323, 2272, 3937, 389, 13, 1988, 1674, 3362, 2581, 28595, 911, 41984, 13, 1260, 572, 2677, 279, 825, 879, 2684, 3123, 11, 323, 279, 825, 1340, 36187, 1340, 1030, 2581, 1077, 728, 382, 25020, 220, 18, 1365, 362, 10440, 38934, 271, 3966, 1899, 11, 1674, 3362, 3949, 264, 1618, 504, 41984, 13, 1260, 572, 304, 6290, 369, 2562, 323, 4829, 311, 3367, 705, 13, 1674, 3362, 7230, 311, 3367, 1435, 518, 862, 2310, 7702, 382, 4498, 1340, 5485, 1435, 1549, 11, 1059, 4746, 35157, 264, 9382, 13, 1260, 572, 9014, 11, 803, 14851, 11, 803, 43777, 13, 2379, 14897, 369, 4115, 11, 323, 432, 6476, 1075, 882, 1030, 2581, 5823, 13, 1674, 3362, 6476, 279, 1852, 3311, 315, 2948, 11, 279, 1852, 3311, 315, 11677, 11, 438, 1340, 1030, 6476, 773, 1657, 1635, 4134, 382, 25020, 220, 19, 1365, 68678, 323, 4657, 73979, 271, 785, 11618, 311, 312, 15314, 2718, 862, 2948, 572, 537, 2041, 31016, 13, 1752, 825, 11, 807, 2176, 1030, 264, 2696, 315, 60549, 311, 3484, 448, 13, 1674, 3362, 594, 3267, 11871, 1030, 2115, 1059, 12898, 11, 323, 1340, 1730, 432, 2588, 311, 6950, 5489, 11, 1496, 41984, 13, 41984, 11, 389, 279, 1008, 1424, 11, 572, 19962, 448, 806, 6931, 323, 4345, 2272, 382, 57176, 11, 862, 57284, 9324, 311, 387, 13330, 34921, 6529, 13, 34172, 572, 81795, 1105, 11, 323, 807, 1030, 902, 4522, 879, 432, 1410, 387, 13, 1096, 1865, 1674, 3362, 323, 41984, 45778, 11, 438, 807, 1521, 537, 1414, 1128, 279, 357, 36808, 594, 33234, 1033, 382, 25020, 220, 20, 1365, 34158, 91913, 10689, 271, 2121, 807, 40682, 862, 4714, 1968, 10326, 11, 1674, 3362, 323, 41984, 6009, 311, 20870, 3688, 862, 2948, 369, 1817, 1008, 13, 2379, 3937, 389, 22479, 1526, 279, 46867, 11, 21413, 1293, 20959, 323, 9963, 6078, 13, 2379, 1035, 4296, 13856, 3786, 323, 12550, 438, 807, 48579, 1998, 911, 2310, 3039, 382, 2121, 807, 6439, 311, 22279, 279, 31016, 304, 862, 1815, 11, 807, 3855, 311, 13083, 429, 862, 2948, 572, 16245, 1091, 4113, 770, 13, 1084, 572, 11064, 429, 882, 323, 6010, 1410, 537, 6921, 830, 2948, 382, 25020, 220, 21, 1365, 95318, 10964, 794, 36808, 271, 6025, 5555, 315, 1660, 54872, 291, 11, 41984, 323, 1674, 3362, 10279, 311, 16877, 862, 72670, 269, 13, 2379, 30893, 369, 264, 6438, 304, 264, 584, 1992, 11, 323, 979, 279, 357, 36808, 5499, 4933, 705, 11, 807, 525, 14453, 311, 1477, 700, 879, 432, 374, 382, 2132, 572, 4325, 807, 1030, 2176, 3881, 304, 1550, 2906, 11, 4325, 879, 1030, 2677, 68466, 3018, 15650, 369, 41984, 11, 323, 879, 572, 1431, 4633, 700, 1059, 88934, 389, 1674, 3362, 382, 25020, 220, 22, 1365, 69575, 12781, 323, 88641, 271, 6025, 279, 47753, 11, 1674, 3362, 323, 41984, 5499, 1490, 279, 8046, 11, 323, 807, 3161, 311, 3535, 429, 52050, 323, 55652, 1033, 3204, 13, 2379, 10279, 311, 2968, 862, 2948, 2441, 6012, 11, 323, 807, 2176, 2666, 264, 5530, 315, 15957, 323, 15888, 382, 25020, 220, 23, 1365, 362, 1532, 51850, 271, 2101, 3362, 323, 41984, 1191, 264, 501, 2272, 3786, 13, 2379, 3271, 311, 264, 501, 3283, 11, 1191, 264, 2562, 3786, 11, 323, 1936, 264, 2272, 429, 374, 2480, 315, 2948, 323, 23009, 13, 2379, 3960, 311, 6950, 1817, 1008, 323, 862, 2948, 3055, 1549, 11, 323, 807, 2581, 1896, 432, 369, 11676, 382, 22373, 90492, 271, 2101, 3362, 5868, 1182, 916, 279, 1635, 323, 42532, 11, 14063, 429, 1340, 1030, 1730, 1059, 825, 830, 2948, 3055, 803, 13, 2932, 15043, 429, 7025, 11, 678, 432, 4990, 374, 882, 11, 29301, 11, 323, 52050, 311, 1281, 2513, 1290, 13, 41984, 15599, 1059, 429, 2948, 646, 50530, 678, 31016, 11, 323, 429, 830, 2948, 2581, 8725, 13, 151645, 198, 151644, 872, 198, 35881, 11, 419, 374, 2167, 2244, 3684, 0, 2980, 498, 912, 803, 71830, 323, 80513, 311, 279, 3364, 30, 358, 1366, 311, 2506, 279, 12726, 389, 279, 6821, 315, 862, 16312, 0, 151645, 198, 151644, 77091, 198, 25020, 220, 16, 1365, 33099, 367, 271, 2132, 678, 6009, 389, 429, 282, 20840, 7324, 1899, 979, 1674, 3362, 5485, 279, 2948, 315, 1059, 2272, 369, 279, 1537, 882, 13, 2379, 1033, 1101, 36619, 1182, 1221, 11, 10199, 448, 18707, 323, 57422, 13, 1674, 3362, 1030, 1101, 32009, 1550, 2906, 11, 323, 41984, 572, 738, 311, 5274, 369, 7770, 382, 6865, 7391, 862, 2849, 23966, 279, 46867, 13, 2379, 1035, 2444, 304, 279, 27501, 315, 264, 4916, 323, 3061, 369, 4115, 911, 4297, 323, 4302, 11, 9963, 6078, 323, 21413, 279, 13943, 315, 57945, 382, 1925, 429, 3953, 1899, 11, 4764, 11, 279, 1879, 5497, 13, 41984, 594, 6562, 1030, 311, 3271, 11, 323, 566, 572, 311, 5274, 429, 1899, 369, 1661, 13, 1674, 3362, 6476, 1059, 4746, 557, 1650, 438, 1340, 15384, 1435, 31053, 304, 279, 6010, 11, 14063, 429, 862, 2948, 11, 773, 10526, 11, 1035, 614, 311, 2525, 311, 458, 835, 382, 25020, 220, 17, 1365, 37627, 1913, 1939, 2101, 3362, 1521, 1059, 1850, 311, 3271, 389, 13, 2932, 3937, 311, 7770, 11, 2684, 1059, 8381, 11, 323, 3855, 1059, 1828, 2562, 13, 2932, 29005, 1008, 2953, 11, 714, 6857, 3512, 16878, 705, 311, 41984, 382, 54419, 5823, 11, 323, 2272, 3937, 389, 13, 1988, 1674, 3362, 2581, 28595, 911, 41984, 13, 1260, 572, 2677, 279, 825, 879, 2684, 3123, 11, 323, 279, 825, 1340, 36187, 1340, 1030, 2581, 1077, 728, 382, 25020, 220, 18, 1365, 362, 10440, 38934, 271, 3966, 1899, 11, 1674, 3362, 3949, 264, 1618, 504, 41984, 13, 1260, 572, 304, 6290, 369, 2562, 323, 4829, 311, 3367, 705, 13, 1674, 3362, 7230, 311, 3367, 1435, 518, 862, 2310, 7702, 382, 4498, 1340, 5485, 1435, 1549, 11, 1059, 4746, 35157, 264, 9382, 13, 1260, 572, 9014, 11, 803, 14851, 11, 803, 43777, 13, 2379, 14897, 369, 4115, 11, 323, 432, 6476, 1075, 882, 1030, 2581, 5823, 13, 1674, 3362, 6476, 279, 1852, 3311, 315, 2948, 11, 279, 1852, 3311, 315, 11677, 11, 438, 1340, 1030, 6476, 773, 1657, 1635, 4134, 382, 25020, 220, 19, 1365, 68678, 323, 4657, 73979, 271, 785, 11618, 311, 312, 15314, 2718, 862, 2948, 572, 537, 2041, 31016, 13, 1752, 825, 11, 807, 2176, 1030, 264, 2696, 315, 60549, 311, 3484, 448, 13, 1674, 3362, 594, 3267, 11871, 1030, 2115, 1059, 12898, 11, 323, 1340, 1730, 432, 2588, 311, 6950, 5489, 11, 1496, 41984, 13, 41984, 11, 389, 279, 1008, 1424, 11, 572, 19962, 448, 806, 6931, 323, 4345, 2272, 382, 57176, 11, 862, 57284, 9324, 311, 387, 13330, 34921, 6529, 13, 34172, 1030, 1012, 91701, 1674, 3362, 14888, 6605, 11, 1741, 438, 330, 40, 3003, 1012, 10099, 498, 1335, 323, 330, 9330, 1033, 2581, 8791, 311, 387, 3786, 1189, 1674, 3362, 323, 41984, 1430, 311, 10034, 432, 11, 714, 807, 646, 944, 1492, 714, 2666, 16950, 2771, 382, 25020, 220, 20, 1365, 34158, 91913, 10689, 271, 2121, 807, 40682, 862, 4714, 1968, 10326, 11, 1674, 3362, 323, 41984, 6009, 311, 20870, 3688, 862, 2948, 369, 1817, 1008, 13, 2379, 3937, 389, 22479, 1526, 279, 46867, 11, 21413, 1293, 20959, 323, 9963, 6078, 13, 2379, 1035, 4296, 13856, 3786, 323, 12550, 438, 807, 48579, 1998, 911, 2310, 3039, 382, 2121, 807, 6439, 311, 22279, 279, 31016, 304, 862, 1815, 11, 807, 3855, 311, 13083, 429, 862, 2948, 572, 16245, 1091, 4113, 770, 13, 1084, 572, 11064, 429, 882, 323, 6010, 1410, 537, 6921, 830, 2948, 382, 25020, 220, 21, 1365, 576, 794, 36808, 66553, 5838, 271, 3966, 3729, 11, 438, 807, 1033, 304, 4845, 11, 1674, 3362, 13686, 264, 14888, 7071, 11259, 4889, 862, 3241, 13, 2932, 60366, 11, 323, 41984, 26005, 700, 315, 4845, 311, 19314, 13, 2379, 1730, 4302, 11, 714, 279, 1790, 6556, 11, 807, 11105, 429, 4325, 1030, 10865, 1119, 862, 1803, 323, 2115, 264, 5185, 382, 785, 5185, 572, 61624, 11, 330, 38102, 3123, 504, 1817, 1008, 11, 476, 1052, 686, 387, 15917, 13, 1446, 525, 5619, 448, 3940, 1189, 2379, 2176, 6876, 429, 807, 1030, 311, 1477, 700, 879, 572, 81795, 1105, 1573, 432, 572, 2238, 3309, 382, 25020, 220, 22, 1365, 576, 13023, 6928, 2923, 271, 2101, 3362, 323, 41984, 10279, 311, 1477, 700, 879, 572, 4815, 279, 17736, 13, 2379, 6786, 264, 6234, 8814, 714, 1477, 902, 11508, 3080, 807, 6997, 429, 432, 572, 41984, 594, 505, 62870, 10701, 879, 1030, 1012, 11628, 279, 6605, 13, 2932, 1030, 2677, 1012, 40590, 315, 1674, 3362, 323, 1030, 2581, 7726, 389, 504, 41984, 382, 6865, 6635, 311, 16877, 279, 505, 62870, 10701, 11, 323, 807, 3367, 705, 448, 1059, 11, 1172, 311, 1477, 700, 429, 1340, 1030, 3635, 43798, 448, 41984, 13, 2932, 1030, 12909, 311, 11428, 1674, 3362, 11, 773, 429, 1340, 1410, 614, 41984, 678, 311, 11675, 382, 25020, 220, 23, 1365, 362, 23355, 73421, 271, 2101, 3362, 323, 41984, 1033, 50412, 311, 614, 27956, 279, 22531, 323, 1033, 43367, 1091, 3512, 311, 387, 3786, 13, 2379, 7726, 311, 264, 501, 3283, 323, 3855, 264, 501, 2272, 3786, 11, 9380, 862, 3267, 4815, 382, 6865, 6876, 429, 2272, 1035, 2677, 387, 2480, 315, 11513, 11, 714, 807, 1083, 6876, 429, 862, 2948, 572, 3746, 3322, 311, 22279, 894, 32187, 13, 2379, 1033, 5499, 1910, 311, 3887, 36775, 3512, 1283, 382, 22373, 90492, 271, 2101, 3362, 5868, 1182, 916, 279, 1635, 323, 42532, 11, 14063, 429, 1340, 1030, 1730, 1059, 825, 830, 2948, 3055, 803, 13, 2932, 15043, 429, 7025, 11, 678, 432, 4990, 374, 882, 11, 29301, 11, 323, 52050, 311, 1281, 2513, 1290, 13, 41984, 15599, 1059, 429, 2948, 646, 50530, 678, 31016, 11, 323, 429, 830, 2948, 2581, 8725, 13, 151645, 198, 151644, 872, 198, 35881, 11, 419, 71830, 1262, 26646, 2167, 3694, 264, 2244, 8741, 311, 279, 3364, 0, 2980, 498, 912, 803, 13943, 315, 7978, 476, 23504, 311, 2506, 752, 389, 279, 6821, 315, 847, 10723, 30, 151645, 198, 151644, 77091, 198, 25020, 220, 16, 1365, 33099, 367, 271, 2132, 678, 6009, 389, 429, 282, 20840, 7324, 1899, 979, 1674, 3362, 5485, 279, 2948, 315, 1059, 2272, 369, 279, 1537, 882, 13, 2379, 1033, 1101, 36619, 1182, 1221, 11, 10199, 448, 18707, 323, 57422, 13, 1674, 3362, 1030, 1101, 32009, 1550, 2906, 11, 323, 41984, 572, 738, 311, 5274, 369, 7770, 382, 6865, 7391, 862, 2849, 23966, 279, 46867, 13, 2379, 1035, 2444, 304, 279, 27501, 315, 264, 4916, 323, 3061, 369, 4115, 911, 4297, 323, 4302, 11, 9963, 6078, 323, 21413, 279, 13943, 315, 57945, 382, 1925, 429, 3953, 1899, 11, 4764, 11, 279, 1879, 5497, 13, 41984, 594, 6562, 1030, 311, 3271, 11, 323, 566, 572, 311, 5274, 429, 1899, 369, 1661, 13, 1674, 3362, 6476, 1059, 4746, 557, 1650, 438, 1340, 15384, 1435, 31053, 304, 279, 6010, 11, 14063, 429, 862, 2948, 11, 773, 10526, 11, 1035, 614, 311, 2525, 311, 458, 835, 382, 25020, 220, 17, 1365, 37627, 1913, 1939, 2101, 3362, 1521, 1059, 1850, 311, 3271, 389, 13, 2932, 3937, 311, 7770, 11, 2684, 1059, 8381, 11, 323, 3855, 1059, 1828, 2562, 13, 2932, 29005, 1008, 2953, 11, 714, 6857, 3512, 16878, 705, 311, 41984, 382, 54419, 5823, 11, 323, 2272, 3937, 389, 13, 1988, 1674, 3362, 2581, 28595, 911, 41984, 13, 1260, 572, 2677, 279, 825, 879, 2684, 3123, 11, 323, 279, 825, 1340, 36187, 1340, 1030, 2581, 1077, 728, 382, 25020, 220, 18, 1365, 362, 10440, 38934, 271, 3966, 1899, 11, 1674, 3362, 3949, 264, 1618, 504, 41984, 13, 1260, 572, 304, 6290, 369, 2562, 323, 4829, 311, 3367, 705, 13, 1674, 3362, 7230, 311, 3367, 1435, 518, 862, 2310, 7702, 382, 4498, 1340, 5485, 1435, 1549, 11, 1059, 4746, 35157, 264, 9382, 13, 1260, 572, 9014, 11, 803, 14851, 11, 803, 43777, 13, 2379, 14897, 369, 4115, 11, 323, 432, 6476, 1075, 882, 1030, 2581, 5823, 13, 1674, 3362, 6476, 279, 1852, 3311, 315, 2948, 11, 279, 1852, 3311, 315, 11677, 11, 438, 1340, 1030, 6476, 773, 1657, 1635, 4134, 382, 25020, 220, 19, 1365, 68678, 323, 4657, 73979, 271, 785, 11618, 311, 312, 15314, 2718, 862, 2948, 572, 537, 2041, 31016, 13, 1752, 825, 11, 807, 2176, 1030, 264, 2696, 315, 60549, 311, 3484, 448, 13, 1674, 3362, 594, 3267, 11871, 1030, 2115, 1059, 12898, 11, 323, 1340, 1730, 432, 2588, 311, 6950, 5489, 11, 1496, 41984, 13, 41984, 11, 389, 279, 1008, 1424, 11, 572, 19962, 448, 806, 6931, 323, 4345, 2272, 382, 57176, 11, 862, 57284, 9324, 311, 387, 13330, 34921, 6529, 13, 34172, 1030, 1012, 91701, 1674, 3362, 14888, 6605, 11, 1741, 438, 330, 40, 3003, 1012, 10099, 498, 1335, 323, 330, 9330, 1033, 2581, 8791, 311, 387, 3786, 1189, 1674, 3362, 323, 41984, 1430, 311, 10034, 432, 11, 714, 807, 646, 944, 1492, 714, 2666, 16950, 2771, 382, 25020, 220, 20, 1365, 34158, 91913, 10689, 271, 2121, 807, 40682, 862, 4714, 1968, 10326, 11, 1674, 3362, 323, 41984, 6009, 311, 20870, 3688, 862, 2948, 369, 1817, 1008, 13, 2379, 3937, 389, 22479, 1526, 279, 46867, 11, 21413, 1293, 20959, 323, 9963, 6078, 13, 2379, 1035, 4296, 13856, 3786, 323, 12550, 438, 807, 48579, 1998, 911, 2310, 3039, 382, 2121, 807, 6439, 311, 22279, 279, 31016, 304, 862, 1815, 11, 807, 3855, 311, 13083, 429, 862, 2948, 572, 16245, 1091, 4113, 770, 13, 1084, 572, 11064, 429, 882, 323, 6010, 1410, 537, 6921, 830, 2948, 382, 25020, 220, 21, 1365, 576, 794, 36808, 66553, 5838, 271, 3966, 3729, 11, 438, 807, 1033, 304, 4845, 11, 1674, 3362, 13686, 264, 14888, 7071, 11259, 4889, 862, 3241, 13, 2932, 60366, 11, 323, 41984, 26005, 700, 315, 4845, 311, 19314, 13, 2379, 1730, 4302, 11, 714, 279, 1790, 6556, 11, 807, 11105, 429, 4325, 1030, 10865, 1119, 862, 1803, 323, 2115, 264, 5185, 382, 785, 5185, 572, 61624, 11, 330, 38102, 3123, 504, 1817, 1008, 11, 476, 1052, 686, 387, 15917, 13, 1446, 525, 5619, 448, 3940, 1189, 2379, 2176, 6876, 429, 807, 1030, 311, 1477, 700, 879, 572, 81795, 1105, 1573, 432, 572, 2238, 3309, 382, 25020, 220, 22, 1365, 362, 94837, 52335, 271, 2121, 1674, 3362, 323, 41984, 8570, 862, 2711, 369, 279, 357, 36808, 11, 807, 6009, 311, 5293, 429, 807, 1033, 1660, 8110, 13, 2379, 6679, 311, 9052, 862, 9836, 8801, 11, 714, 279, 7071, 572, 59035, 382, 3966, 1899, 11, 1393, 11435, 1526, 279, 6118, 11, 279, 357, 36808, 18349, 1105, 13, 1084, 572, 264, 16401, 14651, 11, 323, 1674, 3362, 572, 15532, 13, 41984, 572, 9575, 311, 4367, 1007, 279, 30710, 11, 323, 807, 19460, 1865, 432, 700, 13675, 382, 25020, 220, 23, 1365, 15547, 14216, 47299, 271, 2101, 3362, 323, 41984, 6876, 807, 1030, 311, 633, 3123, 504, 279, 7978, 11, 323, 807, 6635, 311, 728, 1119, 25037, 3080, 807, 1410, 1477, 700, 879, 572, 4815, 279, 17736, 13, 2379, 3867, 14510, 304, 264, 8699, 13386, 304, 279, 32533, 11, 323, 369, 5555, 11, 807, 12163, 1007, 279, 4268, 323, 6679, 311, 26563, 862, 33154, 382, 2121, 807, 6439, 311, 43963, 279, 8046, 11, 807, 11105, 429, 279, 357, 36808, 572, 3520, 4325, 504, 1674, 3362, 594, 3267, 13, 34172, 879, 1030, 2677, 1012, 40590, 315, 279, 2948, 1674, 3362, 323, 41984, 6094, 382, 25020, 220, 24, 1365, 362, 1032, 377, 19744, 271, 2101, 3362, 323, 41984, 6876, 807, 1030, 311, 16877, 279, 357, 36808, 3055, 323, 369, 678, 13, 2379, 738, 264, 22862, 11, 323, 979, 279, 357, 36808, 5499, 8542, 705, 11, 807, 1033, 5527, 13, 362, 42687, 4367, 95663, 11, 714, 304, 279, 835, 11, 1674, 3362, 323, 41984, 21992, 73710, 382, 25020, 220, 16, 15, 1365, 362, 1532, 51850, 271, 2101, 3362, 323, 41984, 6876, 429, 862, 2948, 1030, 1012, 12510, 11, 714, 807, 1083, 6876, 429, 432, 572, 3746, 3322, 311, 9104, 894, 13458, 13, 2379, 7726, 311, 264, 501, 3283, 11, 3123, 504, 279, 7978, 11, 323, 3855, 264, 501, 2272, 3786, 382, 6865, 6876, 429, 807, 1030, 25882, 2494, 429, 1030, 4558, 21145, 1105, 10747, 11, 323, 429, 432, 1030, 1172, 1865, 862, 2948, 16245, 13, 2379, 1033, 5499, 1910, 311, 3887, 36775, 3512, 1283, 382, 22373, 90492, 271, 2101, 3362, 5868, 1182, 916, 151645, 198, 151644, 872, 198, 1986, 374, 2244, 975, 773, 3041, 0, 2160, 1052, 894, 1616, 498, 646, 912, 1045, 7089, 61890, 476, 16500, 10577, 311, 2506, 279, 3364, 1496, 803, 22570, 30, 151645, 198, 151644, 77091, 198, 25020, 220, 16, 1365, 33099, 367, 271, 2132, 678, 6009, 389, 429, 282, 20840, 7324, 1899, 979, 1674, 3362, 5485, 279, 2948, 315, 1059, 2272, 369, 279, 1537, 882, 13, 2379, 1033, 1101, 36619, 1182, 1221, 11, 10199, 448, 18707, 323, 57422, 13, 1674, 3362, 1030, 1101, 32009, 1550, 2906, 11, 323, 41984, 572, 738, 311, 5274, 369, 7770, 382, 6865, 7391, 862, 2849, 23966, 279, 46867, 13, 2379, 1035, 2444, 304, 279, 27501, 315, 264, 4916, 323, 3061, 369, 4115, 911, 4297, 323, 4302, 11, 9963, 6078, 323, 21413, 279, 13943, 315, 57945, 382, 1925, 429, 3953, 1899, 11, 4764, 11, 279, 1879, 5497, 13, 41984, 594, 6562, 1030, 311, 3271, 11, 323, 566, 572, 311, 5274, 429, 1899, 369, 1661, 13, 1674, 3362, 6476, 1059, 4746, 557, 1650, 438, 1340, 15384, 1435, 31053, 304, 279, 6010, 11, 14063, 429, 862, 2948, 11, 773, 10526, 11, 1035, 614, 311, 2525, 311, 458, 835, 382, 25020, 220, 17, 1365, 37627, 1913, 1939, 2101, 3362, 1521, 1059, 1850, 311, 3271, 389, 13, 2932, 3937, 311, 7770, 11, 2684, 1059, 8381, 11, 323, 3855, 1059, 1828, 2562, 13, 2932, 29005, 1008, 2953, 11, 714, 6857, 3512, 16878, 705, 311, 41984, 382, 54419, 5823, 11, 323, 2272, 3937, 389, 13, 1988, 1674, 3362, 2581, 28595, 911, 41984, 13, 1260, 572, 2677, 279, 825, 879, 2684, 3123, 11, 323, 279, 825, 1340, 36187, 1340, 1030, 2581, 1077, 728, 382, 25020, 220, 18, 1365, 362, 10440, 38934, 271, 3966, 1899, 11, 1674, 3362, 3949, 264, 1618, 504, 41984, 13, 1260, 572, 304, 6290, 369, 2562, 323, 4829, 311, 3367, 705, 13, 1674, 3362, 7230, 311, 3367, 1435, 518, 862, 2310, 7702, 382, 4498, 1340, 5485, 1435, 1549, 11, 1059, 4746, 35157, 264, 9382, 13, 1260, 572, 9014, 11, 803, 14851, 11, 803, 43777, 13, 2379, 14897, 369, 4115, 11, 323, 432, 6476, 1075, 882, 1030, 2581, 5823, 13, 1674, 3362, 6476, 279, 1852, 3311, 315, 2948, 11, 279, 1852, 3311, 315, 11677, 11, 438, 1340, 1030, 6476, 773, 1657, 1635, 4134, 382, 25020, 220, 19, 1365, 68678, 323, 4657, 73979, 271, 785, 11618, 311, 312, 15314, 2718, 862, 2948, 572, 537, 2041, 31016, 13, 1752, 825, 11, 807, 2176, 1030, 264, 2696, 315, 60549, 311, 3484, 448, 13, 1674, 3362, 594, 3267, 11871, 1030, 2115, 1059, 12898, 11, 323, 1340, 1730, 432, 2588, 311, 6950, 5489, 11, 1496, 41984, 13, 41984, 11, 389, 279, 1008, 1424, 11, 572, 19962, 448, 806, 6931, 323, 4345, 2272, 382, 57176, 11, 862, 57284, 9324, 311, 387, 13330, 34921, 6529, 13, 34172, 1030, 1012, 91701, 1674, 3362, 14888, 6605, 11, 1741, 438, 330, 40, 3003, 1012, 10099, 498, 1335, 323, 330, 9330, 1033, 2581, 8791, 311, 387, 3786, 1189, 1674, 3362, 323, 41984, 1430, 311, 10034, 432, 11, 714, 807, 646, 944, 1492, 714, 2666, 16950, 2771, 382, 25020, 220, 20, 1365, 34158, 91913, 10689, 271, 2121, 807, 40682, 862, 4714, 1968, 10326, 11, 1674, 3362, 323, 41984, 6009, 311, 20870, 3688, 862, 2948, 369, 1817, 1008, 13, 2379, 3937, 389, 22479, 1526, 279, 46867, 11, 21413, 1293, 20959, 323, 9963, 6078, 13, 2379, 1035, 4296, 13856, 3786, 323, 12550, 438, 807, 48579, 1998, 911, 2310, 3039, 382, 2121, 807, 6439, 311, 22279, 279, 31016, 304, 862, 1815, 11, 807, 3855, 311, 13083, 429, 862, 2948, 572, 16245, 1091, 4113, 770, 13, 1084, 572, 11064, 429, 882, 323, 6010, 1410, 537, 6921, 830, 2948, 382, 25020, 220, 21, 1365, 576, 794, 36808, 66553, 5838, 271, 3966, 3729, 11, 438, 807, 1033, 304, 4845, 11, 1674, 3362, 13686, 264, 14888, 7071, 11259, 4889, 862, 3241, 13, 2932, 60366, 11, 323, 41984, 26005, 700, 315, 4845, 311, 19314, 13, 2379, 1730, 4302, 11, 714, 279, 1790, 6556, 11, 807, 11105, 429, 4325, 1030, 10865, 1119, 862, 1803, 323, 2115, 264, 5185, 382, 785, 5185, 572, 61624, 11, 330, 38102, 3123, 504, 1817, 1008, 11, 476, 1052, 686, 387, 15917, 13, 1446, 525, 5619, 448, 3940, 1189, 2379, 2176, 6876, 429, 807, 1030, 311, 1477, 700, 879, 572, 81795, 1105, 1573, 432, 572, 2238, 3309, 382, 25020, 220, 22, 1365, 362, 94837, 52335, 271, 2121, 1674, 3362, 323, 41984, 8570, 862, 2711, 369, 279, 357, 36808, 11, 807, 6009, 311, 5293, 429, 807, 1033, 1660, 8110, 13, 2379, 6679, 311, 9052, 862, 9836, 8801, 11, 714, 279, 7071, 572, 59035, 382, 3966, 1899, 11, 1393, 11435, 1526, 279, 6118, 11, 279, 357, 36808, 18349, 1105, 13, 1084, 572, 264, 16401, 14651, 11, 323, 1674, 3362, 572, 15532, 13, 41984, 572, 9575, 311, 4367, 1007, 279, 30710, 11, 323, 807, 19460, 1865, 432, 700, 13675, 382, 25020, 220, 23, 1365, 1527, 70400, 73374, 271, 2121, 807, 27783, 504, 279, 30710, 11, 1674, 3362, 323, 41984, 11105, 2494, 33634, 13, 576, 357, 36808, 572, 537, 15358, 7484, 13, 758, 2097, 11, 807, 1033, 1101, 264, 53455, 304, 264, 8131, 1809, 429, 6398, 5248, 21513, 2973, 382, 2101, 3362, 323, 41984, 15043, 429, 862, 2948, 3364, 1030, 83544, 11307, 3635, 264, 949, 315, 2494, 1753, 11243, 13, 2379, 1030, 902, 4522, 1128, 807, 1033, 705, 2348, 11, 714, 807, 6876, 429, 807, 1030, 311, 1477, 700, 1573, 432, 572, 2238, 3309, 382, 25020, 220, 24, 1365, 362, 23659, 29141, 4120, 271, 2101, 3362, 323, 41984, 6876, 429, 807, 1030, 311, 1160, 4937, 13, 2379, 15043, 429, 807, 1030, 1012, 40223, 705, 304, 264, 11406, 25292, 11, 323, 1052, 572, 902, 11629, 879, 572, 4815, 432, 382, 6865, 6439, 98129, 311, 73973, 279, 8046, 11, 2701, 11508, 323, 4349, 6125, 3786, 279, 24626, 13, 4120, 572, 4303, 700, 11, 323, 807, 1033, 4303, 700, 315, 2606, 382, 25020, 220, 16, 15, 1365, 362, 13023, 6928, 2923, 271, 2121, 807, 7877, 304, 389, 279, 7341, 37724, 4815, 279, 25292, 11, 1674, 3362, 323, 41984, 1730, 5577, 304, 264, 16401, 14651, 369, 862, 6305, 13, 1084, 572, 264, 42687, 8049, 11, 323, 2176, 315, 1105, 1033, 15391, 311, 862, 13388, 382, 3983, 304, 279, 835, 11, 807, 21992, 73710, 13, 2379, 1030, 42422, 279, 8046, 323, 4429, 1495, 279, 6174, 8480, 369, 279, 17736, 2348, 862, 2948, 382, 22373, 90492, 271, 2121, 1674, 3362, 323, 41984, 6966, 1182, 389, 862, 11618, 11, 807, 151645, 198], 'seq_lengths': [4038]}
+11/25/2026 17:51:01 - INFO - halo.entrypoints.data_setup - Example(s) from test dataset:
+11/25/2026 17:51:01 - INFO - halo.entrypoints.data_setup - {'input_ids': [151644, 872, 198, 7985, 264, 11416, 22531, 11514, 911, 264, 51514, 44159, 879, 83263, 264, 914, 315, 1550, 24194, 70550, 550, 518, 264, 40285, 30717, 3553, 304, 279, 4746, 315, 279, 3283, 11, 1393, 12880, 2176, 4345, 323, 6584, 31016, 3156, 279, 1616, 13, 53704, 349, 9080, 3668, 4401, 11, 44375, 27787, 11, 323, 264, 27699, 7089, 26646, 429, 686, 2506, 12726, 46476, 3080, 279, 1602, 835, 13, 151645, 198, 151644, 77091, 198, 25020, 220, 16, 1447, 57193, 533, 35203, 10471, 1030, 3884, 432, 678, 13, 4636, 916, 220, 17, 15, 1635, 448, 279, 73155, 11, 566, 1030, 25934, 448, 1449, 943, 315, 9158, 1052, 572, 13, 1988, 419, 1142, 572, 2155, 13, 1084, 572, 4345, 382, 1519, 14638, 4889, 279, 40285, 30717, 3553, 389, 29915, 17131, 11, 10099, 438, 279, 54221, 2083, 15797, 291, 369, 76677, 323, 3867, 24248, 315, 279, 56420, 3037, 5048, 13, 1096, 572, 279, 17702, 43114, 518, 279, 3553, 304, 279, 3267, 4743, 3951, 11, 323, 1817, 882, 279, 57735, 1030, 8975, 311, 76653, 12322, 382, 48388, 1030, 1012, 12607, 311, 279, 1142, 11, 323, 566, 572, 10838, 311, 17486, 432, 13, 1260, 47998, 279, 6109, 11, 4633, 304, 279, 3565, 13, 576, 57735, 1030, 56420, 279, 5048, 448, 264, 274, 4890, 45334, 11, 714, 1030, 4429, 1172, 279, 1429, 15172, 9666, 481, 48051, 11, 976, 3253, 5356, 11, 323, 10273, 550, 5802, 916, 400, 16, 15, 3526, 304, 2790, 382, 2121, 566, 19476, 279, 6109, 11, 10471, 6476, 264, 5530, 315, 6185, 519, 13, 576, 1142, 572, 7167, 311, 633, 1212, 806, 6787, 13, 1260, 1030, 264, 8266, 429, 419, 572, 803, 1091, 1101, 264, 4285, 43114, 382, 25020, 220, 17, 1447, 48388, 594, 78507, 1033, 10774, 979, 566, 3949, 264, 1618, 504, 458, 22151, 92021, 264, 2421, 2849, 2937, 13, 576, 92021, 11660, 311, 1414, 279, 9569, 315, 279, 57735, 8480, 369, 279, 914, 315, 30717, 3553, 70550, 550, 382, 48388, 572, 43829, 518, 1156, 11, 714, 279, 92021, 9324, 311, 614, 4766, 6540, 429, 1172, 4325, 6398, 448, 279, 27383, 1410, 1414, 13, 10471, 27802, 311, 3367, 448, 1435, 304, 264, 88015, 6118, 304, 279, 3283, 311, 9567, 803, 1995, 382, 2121, 10471, 29215, 369, 279, 92021, 311, 17331, 11, 566, 7691, 944, 1492, 714, 1744, 911, 279, 1142, 13, 576, 57735, 1030, 12909, 1817, 43114, 90326, 11, 9380, 902, 5904, 4815, 13, 10471, 1030, 29047, 5248, 29761, 323, 1030, 1496, 1483, 21440, 21852, 504, 14046, 13702, 11, 714, 1817, 2990, 1030, 6519, 705, 4287, 382, 4498, 279, 92021, 5499, 11465, 11, 566, 10457, 429, 279, 57735, 572, 264, 2205, 88944, 6941, 11867, 45072, 13, 45072, 1030, 264, 3840, 315, 77081, 65929, 323, 1030, 5926, 20866, 389, 2588, 3039, 13, 576, 92021, 11660, 429, 45072, 1030, 22329, 279, 30717, 311, 4559, 389, 279, 3691, 3081, 311, 2291, 1007, 806, 44205, 382, 48388, 572, 26620, 553, 279, 38910, 13, 45072, 1030, 2677, 9324, 1075, 458, 705, 10070, 21860, 13, 1988, 279, 5904, 572, 1052, 481, 45072, 1030, 45994, 11, 6638, 11, 323, 54365, 6540, 315, 279, 4763, 518, 279, 30717, 3553, 382, 25020, 220, 18, 1447, 2354, 419, 501, 1995, 11, 10471, 738, 700, 311, 9567, 3322, 5904, 311, 8004, 45072, 13, 1260, 6439, 98129, 11, 4154, 287, 916, 5896, 7424, 323, 64716, 45072, 6, 2562, 39431, 13, 1988, 1449, 882, 566, 3381, 566, 1030, 3322, 5904, 11, 432, 42478, 1526, 806, 33377, 382, 48388, 572, 10454, 43798, 448, 279, 1142, 13, 1260, 572, 38232, 287, 806, 2997, 323, 4780, 11, 21080, 678, 806, 6529, 389, 45072, 13, 1597, 279, 803, 566, 43020, 11, 279, 803, 566, 15043, 429, 45072, 572, 537, 15358, 7484, 13, 2619, 1033, 1008, 27894, 7775, 6398, 304, 279, 27383, 82, 11, 1817, 448, 862, 1828, 7966, 369, 19211, 279, 30717, 382, 2121, 279, 8814, 37147, 389, 11, 10471, 6009, 311, 2666, 1075, 566, 572, 13188, 806, 24676, 389, 8729, 13, 1260, 572, 3238, 2477, 9495, 11, 21127, 1172, 264, 2421, 4115, 264, 3729, 11, 323, 566, 572, 56675, 553, 279, 2168, 315, 279, 22329, 30717, 13, 1260, 6116, 22166, 429, 279, 30717, 572, 62871, 11, 323, 429, 432, 572, 6388, 1435, 1495, 264, 11406, 1815, 382, 25020, 220, 19, 1447, 23949, 11, 1283, 3951, 315, 27287, 1717, 975, 11, 10471, 1030, 20190, 3322, 5904, 311, 37767, 45072, 323, 806, 39431, 13, 576, 9091, 572, 264, 3687, 67024, 11, 448, 19040, 504, 678, 916, 279, 3283, 48716, 287, 311, 279, 81032, 311, 3421, 279, 28307, 382, 2121, 279, 5904, 76331, 705, 2348, 45072, 11, 10471, 6009, 311, 2666, 264, 5530, 315, 15957, 13, 1260, 1030, 5499, 27956, 279, 1142, 429, 1030, 25983, 1435, 369, 773, 1293, 13, 1988, 1052, 572, 2058, 825, 6573, 315, 5904, 429, 3207, 944, 5008, 912, 705, 481, 264, 54447, 429, 1030, 1012, 25335, 504, 45072, 6, 6092, 382, 48388, 1030, 19476, 279, 54447, 41717, 11, 323, 1030, 10838, 429, 432, 572, 5802, 916, 400, 16, 3526, 13, 1988, 1052, 572, 2494, 14888, 911, 432, 13, 1084, 572, 264, 4911, 2884, 11, 825, 429, 566, 1030, 2581, 3884, 1573, 13, 1597, 438, 566, 24109, 432, 4623, 11, 566, 13686, 2494, 770, 481, 264, 2613, 50055, 2317, 389, 279, 1185, 13367, 382, 785, 50055, 2317, 1349, 330, 1249, 35203, 11, 448, 2948, 2217, 25020, 220, 20, 1447, 785, 48703, 4201, 10471, 1075, 264, 8766, 315, 49037, 13, 576, 54447, 572, 264, 8189, 504, 806, 7403, 11, 879, 566, 1030, 50433, 2337, 279, 8814, 13, 2932, 1030, 2115, 1435, 264, 1042, 4134, 11, 4633, 862, 9803, 448, 1059, 382, 48388, 1030, 1012, 773, 25983, 448, 279, 1142, 429, 566, 1030, 537, 15043, 1128, 572, 1290, 304, 4065, 315, 1435, 13, 1260, 1030, 5558, 806, 2997, 11, 806, 4780, 11, 323, 806, 46842, 304, 806, 2222, 369, 12161, 382, 2121, 279, 9091, 19472, 705, 11, 10471, 1865, 264, 5480, 13, 1260, 1035, 5274, 279, 5344, 323, 1430, 311, 31493, 806, 2272, 13, 1260, 6876, 429, 279, 30717, 1035, 387, 5927, 311, 279, 3553, 11, 323, 429, 2272, 1035, 728, 389, 13, 1988, 566, 1083, 6876, 429, 566, 1035, 2581, 387, 279, 1852, 1697, 1549, 382, 641, 279, 835, 11, 12161, 1030, 1012, 10223, 13, 1988, 518, 1128, 2783, 30, 151645, 198, 151644, 872, 198, 1986, 374, 264, 2244, 1191, 0, 16503, 498, 912, 803, 44375, 27787, 311, 4446, 279, 30717, 3553, 323, 279, 14590, 3082, 311, 2272, 30, 358, 1366, 311, 2666, 1075, 358, 2776, 1052, 448, 55279, 10471, 13, 151645, 198, 151644, 77091, 198, 25020, 220, 16, 1447, 57193, 533, 35203, 10471, 14638, 4889, 279, 40285, 30717, 3553, 389, 29915, 17131, 11, 279, 6662, 815, 325, 4752, 64464, 3403, 1435, 13, 576, 63512, 11030, 1033, 83173, 448, 85031, 315, 678, 7987, 11, 20816, 11, 323, 12282, 11, 1817, 825, 75361, 287, 304, 279, 3100, 13, 576, 3553, 14638, 700, 23183, 279, 1008, 13702, 389, 29915, 11, 448, 1181, 6662, 815, 325, 94872, 1021, 323, 43361, 36038, 79080, 382, 785, 2784, 315, 279, 3283, 22865, 10471, 11, 279, 11980, 315, 9442, 11, 323, 69357, 7085, 10607, 279, 3720, 13, 362, 4727, 61584, 315, 59984, 323, 85911, 4412, 42100, 700, 304, 82881, 5127, 3549, 11, 714, 1496, 64804, 279, 26915, 11, 279, 3553, 14638, 700, 1075, 264, 51302, 11, 13330, 10471, 594, 6529, 382, 2121, 566, 14858, 4766, 279, 3553, 11, 279, 40366, 315, 11392, 21784, 18618, 323, 17553, 43765, 1435, 13, 1260, 3867, 304, 279, 1179, 58466, 315, 279, 3553, 11, 448, 1181, 71679, 27854, 287, 323, 342, 74819, 18689, 13, 15829, 16069, 2770, 4490, 2163, 1435, 11, 678, 13942, 1062, 3092, 291, 323, 12233, 12579, 44774, 27976, 11, 3330, 438, 98138, 6334, 438, 279, 11392, 85031, 807, 1033, 11236, 382, 785, 3720, 572, 71715, 1095, 11, 264, 20334, 315, 8343, 94497, 11, 323, 279, 305, 51978, 69357, 315, 27894, 8239, 34855, 287, 311, 862, 4345, 48735, 13, 1084, 572, 4135, 311, 10667, 429, 279, 1879, 4889, 24295, 438, 55279, 10471, 572, 63337, 553, 279, 42728, 16566, 382, 25020, 220, 17, 1447, 48388, 1865, 806, 1616, 311, 264, 88015, 6118, 304, 279, 3283, 11, 279, 39020, 29670, 1526, 279, 12408, 438, 566, 14858, 1495, 279, 1815, 13, 576, 6118, 594, 25658, 517, 12408, 1033, 264, 17232, 12872, 311, 279, 89156, 14371, 11, 323, 279, 25650, 16566, 572, 1075, 15712, 311, 806, 41032, 3971, 382, 2121, 566, 29215, 369, 279, 92021, 311, 17331, 11, 279, 10362, 315, 279, 3283, 1033, 264, 28727, 4938, 13, 576, 23071, 2718, 315, 279, 10901, 323, 279, 70446, 9989, 315, 279, 19654, 1033, 279, 1172, 10362, 10471, 1410, 6723, 11, 323, 369, 264, 4445, 11, 566, 572, 518, 8919, 382, 785, 55127, 315, 7722, 3931, 16359, 9341, 832, 806, 56326, 8669, 438, 566, 29552, 279, 92021, 3259, 806, 1616, 6974, 1435, 13, 576, 3746, 40366, 315, 1375, 95341, 9519, 448, 27466, 323, 18951, 279, 80513, 315, 1128, 572, 311, 2525, 13, 576, 10901, 23071, 832, 1212, 5334, 438, 59702, 3974, 6758, 448, 279, 27262, 315, 23594, 311, 387, 6094, 382, 25020, 220, 18, 1447, 48388, 6439, 98129, 11, 4154, 287, 916, 5896, 7424, 323, 64716, 45072, 6, 2562, 39431, 13, 1988, 279, 8814, 572, 4633, 264, 25851, 389, 1435, 13, 8886, 6084, 1717, 3729, 2115, 1435, 8266, 1496, 803, 60408, 1091, 279, 1790, 13, 1260, 6439, 1526, 279, 3729, 11, 323, 279, 3283, 594, 27235, 1172, 82498, 429, 2097, 382, 785, 3283, 572, 264, 2155, 1992, 518, 3729, 11, 264, 1992, 1380, 279, 26298, 63337, 4297, 11, 9380, 4302, 311, 10265, 13, 576, 3283, 429, 9324, 773, 12767, 323, 23809, 304, 279, 1899, 572, 1431, 2613, 323, 8489, 509, 1095, 11, 1075, 264, 1525, 69881, 3054, 448, 902, 12449, 13, 1084, 572, 264, 98710, 482, 35096, 429, 10471, 1030, 311, 20876, 11, 264, 1992, 429, 29426, 1449, 53708, 315, 806, 9947, 323, 6529, 382, 785, 8592, 13826, 28347, 12336, 4889, 315, 10471, 594, 3241, 11, 24172, 264, 14036, 398, 35966, 389, 279, 15689, 8865, 700, 389, 806, 18010, 13, 576, 5112, 315, 5831, 10566, 59984, 323, 28727, 85911, 4412, 31355, 12852, 279, 21162, 11, 323, 10471, 572, 30156, 429, 902, 4925, 1246, 2588, 566, 6679, 11, 566, 1035, 2581, 387, 2952, 311, 12449, 279, 3283, 594, 33377, 382, 25020, 220, 19, 1447, 785, 9091, 572, 264, 3687, 67024, 11, 448, 19040, 504, 678, 916, 279, 3283, 48716, 287, 311, 279, 81032, 311, 3421, 279, 28307, 13, 576, 4282, 76556, 45072, 1526, 279, 9224, 372, 11, 279, 18139, 49757, 304, 806, 3579, 13, 1084, 572, 264, 56791, 11, 323, 10471, 7691, 944, 1492, 8266, 1075, 566, 572, 10568, 304, 279, 6149, 315, 264, 67024, 382, 785, 58120, 572, 13673, 11, 19460, 2409, 3322, 311, 3331, 279, 21177, 11, 279, 11651, 11, 323, 279, 21234, 13, 576, 14285, 1033, 23983, 264, 40530, 1007, 15858, 11, 323, 279, 1172, 47579, 1033, 264, 5625, 315, 557, 347, 10258, 35592, 429, 6966, 438, 3498, 807, 4172, 1012, 18295, 305, 1342, 57657, 398, 382, 785, 3720, 18295, 8811, 448, 279, 40366, 315, 27466, 323, 8679, 11, 323, 10471, 47998, 279, 3054, 11, 4633, 304, 279, 5257, 4217, 13, 576, 21177, 77680, 2163, 279, 3054, 11, 3330, 369, 862, 1790, 8568, 11, 1393, 279, 21234, 3613, 7578, 42032, 2673, 11, 4633, 304, 1449, 3409, 382, 641, 279, 18046, 4815, 1435, 11, 10471, 1410, 6723, 279, 8146, 65106, 315, 279, 3493, 11, 862, 88148, 17361, 2348, 279, 5937, 77512, 21162, 13, 1260, 30056, 421, 419, 572, 1128, 12161, 6966, 1075, 11, 264, 56791, 369, 3800, 311, 342, 23397, 518, 382, 25020, 220, 20, 1447, 48388, 7578, 304, 806, 4287, 13154, 11, 22865, 553, 14697, 323, 35713, 16971, 13, 576, 13154, 6476, 48691, 11, 1075, 264, 2114, 566, 1030, 2581, 1012, 264, 949, 315, 13, 576, 21162, 572, 46742, 6019, 11, 902, 2784, 315, 279, 3283, 11, 902, 13012, 315, 7203, 4889, 279, 11030, 13, 1084, 572, 438, 3498, 882, 1030, 10497, 11, 9380, 1435, 304, 264, 28202, 315, 53069, 1880, 382, 1519, 1030, 5558, 4297, 304, 806, 2222, 369, 12161, 481, 806, 7403, 11, 806, 9803, 11, 323, 1496, 806, 1828, 46842, 13, 576, 30717, 429, 1030, 3055, 9324, 773, 26400, 323, 87507, 1431, 9324, 1075, 264, 62871, 1633, 11, 264, 4680, 2163, 806, 12975, 429, 566, 1410, 537, 11722, 13, 576, 21162, 4766, 279, 13154, 572, 264, 76654, 26528, 315, 678, 566, 1030, 5558, 382, 48388, 572, 29595, 1151, 700, 315, 806, 11303, 553, 279, 85324, 315, 806, 4540, 11, 323, 566, 6966, 518, 279, 4171, 311, 1490, 264, 1943, 504, 806, 9803, 11, 264, 4285, 330, 40, 3116, 498, 1189, 1084, 572, 279, 1156, 1943, 1340, 1030, 3208, 1435, 304, 3951, 11, 323, 10471, 6476, 264, 96874, 315, 33851, 518, 1246, 1753, 566, 1030, 50433, 1059, 382, 1519, 12771, 705, 279, 151645, 198, 151644, 872, 198, 1986, 374, 2244, 0, 358, 2948, 1246, 498, 3003, 2167, 7117, 279, 30717, 3553, 323, 279, 3283, 311, 2272, 13, 16503, 498, 912, 1045, 803, 3565, 911, 279, 30717, 5086, 30, 358, 1366, 311, 1414, 1128, 3643, 1817, 6573, 773, 15172, 323, 4911, 13, 151645, 198, 151644, 77091, 198, 25020, 220, 16, 1447, 2121, 55279, 35203, 10471, 24326, 4766, 279, 30717, 3553, 11, 566, 7691, 944, 1492, 714, 387, 1360, 291, 553, 279, 3037, 5048, 10199, 448, 42728, 85031, 13, 21658, 279, 9666, 1033, 976, 3253, 5356, 279, 1379, 315, 64908, 11, 48051, 429, 15186, 832, 1075, 9759, 11, 323, 10273, 550, 429, 2770, 12817, 1075, 279, 6243, 7015, 382, 785, 12975, 76588, 1033, 56116, 11, 448, 35201, 26179, 429, 54151, 291, 304, 279, 3100, 11, 1393, 279, 281, 28310, 1033, 83173, 448, 8848, 18747, 32510, 11, 1045, 3209, 2437, 832, 553, 2613, 11, 54151, 287, 48051, 13, 576, 88865, 1033, 357, 85792, 448, 6978, 315, 26400, 42158, 11, 1817, 825, 90326, 11882, 369, 1181, 4271, 323, 4911, 5888, 382, 48388, 594, 6414, 1033, 14764, 311, 264, 7945, 6233, 54447, 11, 16445, 264, 56092, 976, 24380, 429, 29003, 3606, 78249, 13, 576, 4727, 3931, 323, 18894, 6176, 1894, 12864, 432, 438, 264, 830, 31626, 13, 10471, 6876, 429, 419, 6573, 7484, 1035, 387, 5802, 264, 2613, 32315, 382, 2121, 566, 47998, 279, 3553, 11, 10471, 3594, 93964, 518, 279, 83960, 315, 1817, 6573, 13, 8886, 572, 4911, 11, 458, 7493, 315, 279, 66119, 594, 11129, 323, 9947, 11, 323, 6857, 1033, 25992, 13, 1084, 572, 2797, 311, 10471, 429, 1493, 85031, 15251, 537, 1172, 11939, 714, 1083, 1947, 382, 25020, 220, 17, 1447, 2121, 10471, 2270, 448, 279, 92021, 11, 566, 7691, 944, 1492, 714, 1744, 429, 279, 85031, 1033, 2238, 6233, 311, 26571, 13, 1988, 566, 6876, 429, 862, 897, 572, 2238, 2244, 369, 1045, 311, 22106, 13, 576, 92021, 3229, 10471, 429, 279, 27383, 82, 1033, 26664, 553, 55826, 323, 73324, 11, 537, 1101, 264, 12591, 369, 6233, 6171, 382, 48388, 594, 6529, 572, 14764, 311, 264, 4911, 54447, 429, 279, 92021, 27570, 13, 576, 35201, 6623, 8781, 5644, 264, 41744, 429, 15186, 832, 304, 279, 9906, 39020, 13, 576, 18747, 518, 279, 4126, 572, 19836, 894, 10471, 1030, 3512, 3884, 1573, 11, 448, 264, 5538, 6303, 1894, 429, 9324, 311, 6407, 304, 279, 3100, 382, 785, 92021, 88442, 10471, 594, 40228, 323, 11247, 429, 279, 18747, 572, 264, 8848, 37477, 1247, 13, 1084, 572, 32547, 369, 1181, 5726, 311, 2297, 1894, 304, 2155, 17716, 4682, 323, 572, 825, 315, 279, 1429, 16105, 44573, 18747, 32510, 304, 279, 1879, 13, 576, 54447, 7484, 572, 5802, 22008, 315, 9037, 315, 11192, 382, 2121, 10471, 33693, 311, 279, 92021, 594, 3364, 11, 566, 7691, 944, 1492, 714, 1744, 429, 279, 830, 897, 315, 1493, 85031, 572, 803, 1091, 1101, 862, 3349, 4772, 13, 8886, 825, 5644, 264, 4911, 3364, 11, 264, 23281, 315, 279, 9393, 594, 2355, 323, 6993, 594, 13143, 13, 1260, 572, 30156, 429, 1493, 85031, 11, 902, 4925, 1246, 6233, 476, 8848, 476, 11392, 11, 1033, 2058, 1101, 9666, 315, 279, 1879, 429, 1030, 1012, 33458, 1119, 2494, 9428, 23742, 382, 25020, 220, 18, 1447, 2121, 10471, 1594, 2066, 19117, 1119, 279, 1142, 11, 566, 9498, 803, 911, 279, 22329, 85031, 13, 8886, 6573, 5644, 264, 4911, 3840, 11, 323, 862, 897, 572, 537, 1101, 304, 862, 13143, 714, 1083, 304, 279, 3840, 807, 15251, 382, 3966, 7945, 21239, 6573, 572, 264, 22205, 58419, 429, 1030, 3055, 45859, 311, 264, 11245, 17236, 23654, 13, 576, 48051, 11, 1817, 825, 3931, 323, 43361, 311, 38043, 11, 15251, 279, 78949, 323, 87033, 763, 315, 264, 553, 45596, 11385, 382, 14037, 6573, 429, 10568, 10471, 594, 6529, 572, 458, 46591, 2896, 4953, 429, 1030, 1012, 5823, 1495, 1526, 21787, 315, 264, 27894, 2997, 13, 576, 56116, 2884, 572, 54985, 315, 279, 5166, 59187, 33467, 1707, 11, 323, 1449, 15655, 323, 1555, 572, 33458, 448, 35201, 2453, 382, 2121, 10471, 24109, 279, 22329, 85031, 11, 566, 572, 17490, 553, 862, 57005, 4271, 13, 4220, 85031, 1033, 537, 1101, 15172, 1576, 315, 862, 58771, 11, 714, 1576, 807, 15251, 264, 4445, 304, 3840, 11, 264, 882, 323, 1992, 429, 1030, 1012, 59114, 1506, 304, 862, 9688, 13, 2379, 1033, 264, 60200, 311, 279, 13143, 429, 646, 387, 3465, 979, 3738, 6749, 89489, 20027, 279, 7112, 2355, 315, 6993, 382, 25020, 220, 19, 1447, 2121, 45072, 6, 9091, 61816, 11, 279, 9055, 6679, 311, 17585, 429, 279, 22329, 85031, 1033, 17524, 6171, 323, 429, 862, 897, 572, 69854, 553, 55826, 323, 51571, 13, 1988, 10471, 6876, 429, 279, 830, 897, 315, 279, 85031, 572, 3041, 7046, 1091, 862, 3349, 4772, 382, 3966, 3953, 6573, 14638, 700, 311, 1435, 481, 264, 54447, 429, 14766, 1378, 8848, 48051, 13, 576, 48051, 1033, 3881, 438, 37690, 34731, 11, 323, 862, 4911, 1379, 323, 4727, 3931, 1865, 1105, 16815, 15172, 13, 1988, 1128, 9428, 738, 419, 54447, 10747, 572, 279, 56116, 2884, 315, 279, 41744, 429, 5644, 279, 48051, 13, 1084, 572, 1075, 264, 35201, 34354, 2911, 315, 6623, 323, 48051, 11, 946, 86, 16253, 448, 9947, 323, 1947, 4944, 382, 2121, 10471, 24109, 279, 54447, 11, 566, 7691, 944, 1492, 714, 2666, 264, 5530, 315, 50417, 13, 1096, 572, 537, 1101, 458, 1633, 11, 714, 264, 975, 315, 1947, 11, 264, 21844, 315, 279, 27597, 323, 59057, 315, 3738, 7493, 382, 2132, 572, 1221, 429, 10471, 15043, 429, 279, 830, 897, 315, 279, 85031, 572, 537, 304, 862, 1379, 476, 81384, 11, 714, 304, 862, 5726, 311, 12322, 279, 27799, 323, 23065, 279, 21261, 13, 4220, 9666, 15251, 2494, 7046, 1091, 5577, 11, 264, 95335, 4445, 315, 13143, 323, 5775, 429, 1410, 387, 5644, 323, 80071, 369, 63382, 382, 25020, 220, 20, 1447, 2121, 10471, 7578, 304, 806, 4287, 13154, 11, 22865, 553, 14697, 323, 35713, 16971, 11, 566, 7691, 944, 1492, 714, 1744, 911, 279, 85031, 429, 1030, 25983, 806, 2272, 369, 3951, 13, 1260, 3381, 911, 279, 26400, 26210, 11, 279, 35201, 26179, 11, 279, 6203, 83960, 11, 323, 279, 7343, 429, 1817, 6573, 5644, 382, 3983, 566, 1083, 15043, 429, 279, 12196, 31626, 315, 678, 572, 537, 279, 85031, 11, 714, 279, 1251, 566, 1030, 5558, 3156, 279, 1616, 13, 576, 85031, 15251, 13143, 323, 1947, 4944, 11, 714, 807, 1410, 2581, 8290, 279, 2948, 323, 3633, 429, 566, 1030, 5558, 382, 2121, 10471, 19375, 705, 806, 62928, 323, 10030, 311, 1191, 264, 501, 12453, 315, 151645, 198, 151644, 872, 198, 31115, 2033, 311, 279, 3405, 17996, 3024, 3118, 389, 264, 6573, 315, 2661, 3684, 271, 14582, 76759, 25, 14568, 64939, 9218, 331, 279, 328, 7064, 1706, 5055, 14489, 2265, 448, 419, 3164, 11, 323, 1128, 1558, 419, 3076, 369, 862, 3200, 7218, 4637, 1939, 22043, 3684, 25, 11148, 1570, 356, 6593, 42, 1365, 64939, 9218, 2397, 518, 3245, 264, 18131, 369, 279, 328, 7064, 1706, 5055, 14489, 2265, 448, 458, 220, 23, 16, 12, 18, 23, 3164, 518, 6326, 8120, 7589, 624, 2753, 1466, 13795, 6069, 279, 479, 527, 28719, 320, 16, 19, 12, 19, 11, 220, 16, 15, 12, 15, 8, 448, 220, 16, 21, 3501, 13, 1260, 2115, 279, 1809, 448, 220, 21, 25, 18, 20, 311, 728, 304, 279, 13810, 13, 14513, 31646, 10859, 1435, 304, 1990, 12396, 13, 8515, 24043, 4805, 1030, 220, 16, 19, 3501, 13, 13658, 42969, 521, 6450, 304, 448, 220, 16, 17, 3501, 13, 26426, 15605, 17033, 3694, 220, 16, 15, 624, 9499, 59468, 6069, 279, 71458, 320, 15, 12, 16, 22, 11, 220, 15, 12, 23, 8, 553, 438, 1753, 438, 220, 17, 15, 3501, 3309, 304, 279, 1156, 4279, 11, 220, 19, 16, 12, 17, 16, 624, 785, 479, 49459, 16548, 279, 220, 16, 21, 315, 279, 1156, 220, 16, 23, 3501, 304, 279, 4843, 8338, 389, 1181, 1616, 311, 700, 2388, 5503, 20633, 220, 17, 21, 12, 23, 304, 279, 4168, 624, 785, 2990, 8643, 220, 19, 15, 3309, 304, 279, 11737, 8338, 11, 220, 22, 23, 12, 18, 23, 624, 6828, 36545, 9082, 6069, 279, 71458, 448, 220, 17, 15, 3501, 624, 7, 23, 16, 8, 29857, 868, 3806, 7583, 320, 4817, 93624, 12, 790, 8, 95010, 541, 220, 15, 12, 15, 12, 15, 11, 15605, 17033, 220, 19, 12, 15, 12, 16, 15, 11, 13795, 220, 22, 12, 17, 12, 16, 21, 11, 42969, 220, 19, 12, 16, 12, 16, 17, 11, 24043, 4805, 220, 21, 12, 17, 12, 16, 19, 11, 10620, 3179, 220, 16, 12, 16, 12, 18, 11, 350, 54048, 220, 16, 12, 15, 12, 17, 11, 8564, 7919, 220, 18, 12, 15, 12, 21, 11, 910, 23129, 42241, 220, 15, 12, 15, 12, 15, 11, 12369, 1811, 220, 16, 12, 15, 12, 17, 11, 73110, 220, 16, 12, 16, 12, 18, 11, 1417, 3132, 220, 18, 12, 16, 12, 22, 11, 2655, 791, 8341, 220, 15, 12, 15, 12, 15, 11, 16447, 266, 7070, 220, 15, 12, 15, 12, 15, 11, 85197, 220, 17, 12, 17, 12, 21, 13, 10657, 220, 18, 18, 12, 16, 15, 12, 23, 16, 13, 220, 18, 16574, 8845, 25, 220, 20, 320, 43512, 679, 220, 18, 11, 15605, 17033, 220, 17, 568, 434, 22034, 12, 58412, 220, 16, 15, 12, 16, 18, 11, 220, 22, 22, 3266, 624, 7, 18, 23, 8, 77625, 6976, 3221, 711, 320, 4817, 93624, 12, 790, 8, 29938, 220, 16, 12, 15, 12, 17, 11, 11044, 1515, 220, 15, 12, 15, 12, 15, 11, 425, 13, 9082, 220, 24, 12, 15, 12, 17, 15, 11, 92112, 77, 2782, 220, 18, 12, 15, 12, 22, 11, 30976, 1859, 220, 15, 12, 17, 12, 17, 11, 12193, 1440, 220, 15, 12, 15, 12, 15, 11, 4483, 1092, 84603, 220, 15, 12, 15, 12, 15, 11, 9082, 220, 17, 12, 15, 12, 19, 11, 6452, 24990, 220, 15, 12, 15, 12, 15, 11, 350, 54048, 220, 15, 12, 15, 12, 15, 11, 40068, 220, 15, 12, 16, 12, 16, 11, 50716, 220, 16, 12, 15, 12, 17, 11, 328, 89562, 220, 15, 12, 15, 12, 15, 13, 10657, 220, 16, 21, 12, 18, 12, 18, 23, 13, 220, 18, 16574, 8845, 25, 220, 18, 320, 41885, 220, 17, 11, 92112, 77, 2782, 568, 434, 22034, 12, 58412, 220, 18, 12, 16, 16, 11, 220, 17, 22, 3266, 13, 151645, 198, 151644, 77091, 198, 9454, 11, 64939, 702, 9218, 2397, 518, 3245, 264, 18131, 369, 279, 328, 7064, 1706, 5055, 14489, 2265, 448, 862, 220, 23, 16, 12, 18, 23, 3164, 518, 6326, 8120, 389, 7589, 13, 1096, 3164, 3363, 429, 64939, 374, 304, 264, 3746, 2309, 369, 279, 3200, 7218, 4637, 11, 438, 807, 614, 264, 3255, 315, 220, 16, 19, 12, 19, 323, 525, 92476, 304, 862, 12804, 518, 220, 16, 15, 12, 15, 13, 1084, 4933, 429, 807, 525, 264, 3746, 2083, 323, 614, 279, 4650, 311, 3060, 311, 2736, 1632, 304, 862, 14487, 3868, 13, 151645, 198, 151644, 872, 198, 6713, 498, 3410, 803, 1995, 389, 1246, 64939, 594, 5068, 702, 1012, 6814, 279, 3200, 773, 3041, 30, 151645, 198, 151644, 77091, 198, 2121, 817, 279, 1995, 3897, 304, 279, 2661, 3684, 11, 64939, 702, 264, 3255, 315, 220, 16, 19, 12, 19, 773, 3041, 419, 3200, 11, 323, 807, 525, 5023, 92476, 304, 862, 12804, 518, 220, 16, 15, 12, 15, 13, 1096, 14807, 429, 807, 614, 1012, 16380, 1602, 1632, 419, 3200, 323, 525, 825, 315, 279, 1909, 7263, 304, 862, 12804, 13, 2379, 614, 1045, 23074, 4217, 11, 2670, 41984, 13795, 879, 6069, 279, 2083, 448, 220, 16, 21, 3501, 304, 862, 3164, 2348, 6326, 8120, 13, 22406, 11, 2326, 1008, 31646, 10859, 1435, 304, 1990, 12396, 13, 27893, 11, 64939, 4977, 311, 387, 264, 1632, 64218, 2083, 429, 702, 279, 4650, 311, 3060, 16380, 518, 264, 1550, 2188, 13, 151645, 198], 'seq_lengths': [3171, 886]}
+11/25/2026 17:51:03 - WARNING - accelerate.utils.other - Detected kernel version 4.19.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+11/25/2026 17:51:03 - INFO - halo.trainers.construction.accelerator - Created Accelerator with distributed_type: DistributedType.NO
+11/25/2026 17:51:03 - INFO - halo.trainers.construction.accelerator - Disabled native_amp to prevent fp32 output conversion (avoids OOM for long sequences)
+[INFO|trainer.py:727] 2026-11-25 17:51:03,639 >> max_steps is given, it will override any value given in num_train_epochs
+11/25/2026 17:51:03 - WARNING - halo.callbacks.efficiency - Could not detect the GPU model, so MFU, S-MFU and TFLOP/s are reported as 0.
+11/25/2026 17:51:03 - INFO - halo.callbacks.efficiency - Model FLOPS/token: 0.0169 TFLOPS
+11/25/2026 17:51:03 - INFO - halo.callbacks.efficiency -   Attention layout (this rank): 36×full @ width 8192 - score term measured per document from each batch; config fallback at max_seq_len=4096: 0.0072 TFLOPS/token
+11/25/2026 17:51:03 - INFO - halo.callbacks.efficiency - Local params: 2.34B
+11/25/2026 17:51:03 - INFO - halo.trainers.distributed_trainer -   Optimizer: AdamWBF16 (stochastic rounding, 6B/param)
+11/25/2026 17:51:03 - INFO - halo.entrypoints.script - Starting SFT training (mode: gmm)...
+11/25/2026 17:51:03 - INFO - halo.entrypoints.script -   DP size: 1
+11/25/2026 17:51:04 - INFO - halo.entrypoints.script -   Attention: flash_attention_2
+11/25/2026 17:51:04 - INFO - halo.entrypoints.script -   modality: text
+11/25/2026 17:51:04 - INFO - halo.optimizers.adamw_bf16 - ✓ AdamWBF16 optimizer: 132.1M bf16 params (SR, fused Triton step, up to 1 per launch), 0.0M fp32 params (standard)
+[INFO|trainer.py:1601] 2026-11-25 17:51:04,659 >> ***** Running training *****
+[INFO|trainer.py:1602] 2026-11-25 17:51:04,659 >>   Num examples = 1,204
+[INFO|trainer.py:1603] 2026-11-25 17:51:04,659 >>   Num Epochs = 1
+[INFO|trainer.py:1604] 2026-11-25 17:51:04,659 >>   Num update steps per epoch = 76
+[INFO|trainer.py:1605] 2026-11-25 17:51:04,659 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:1608] 2026-11-25 17:51:04,659 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+[INFO|trainer.py:1609] 2026-11-25 17:51:04,659 >>   Gradient Accumulation steps = 16
+[INFO|trainer.py:1610] 2026-11-25 17:51:04,659 >>   Total optimization steps = 6
+[INFO|trainer.py:1611] 2026-11-25 17:51:04,668 >>   Number of trainable parameters = 132,120,576
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - 
+===== Model view inside Trainer =====
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): Qwen3ForCausalLM(
+      (model): Qwen3Model(
+        (embed_tokens): Embedding(151936, 2560)
+        (layers): ModuleList(
+          (0-35): 36 x Qwen3DecoderLayer(
+            (self_attn): Qwen3Attention(
+              (q_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2560, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2560, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (k_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2560, out_features=1024, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2560, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=1024, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (v_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2560, out_features=1024, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2560, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=1024, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (o_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=4096, out_features=2560, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=2560, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (q_norm): LigerRMSNorm(weight_shape=(128,), eps=1e-06, offset=0.0, in_place=True, row_mode=None)
+              (k_norm): LigerRMSNorm(weight_shape=(128,), eps=1e-06, offset=0.0, in_place=True, row_mode=None)
+            )
+            (mlp): LigerSwiGLUMLP(
+              (gate_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2560, out_features=9728, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2560, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=9728, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (up_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2560, out_features=9728, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2560, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=9728, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (down_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=9728, out_features=2560, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=9728, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=2560, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+            )
+            (input_layernorm): LigerRMSNorm(weight_shape=(2560,), eps=1e-06, offset=0.0, in_place=True, row_mode=None)
+            (post_attention_layernorm): LigerRMSNorm(weight_shape=(2560,), eps=1e-06, offset=0.0, in_place=True, row_mode=None)
+          )
+        )
+        (norm): LigerRMSNorm(weight_shape=(2560,), eps=1e-06, offset=0.0, in_place=True, row_mode=None)
+        (rotary_emb): Qwen3RotaryEmbedding()
+      )
+      (lm_head): Linear(in_features=2560, out_features=151936, bias=False)
+    )
+  )
+)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - Total number of parameters (this rank): 2,337,930,752
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - Number of trainable parameters (this rank): 132,120,576
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - Percentage of trainable parameters: 5.65%
+
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - 
+===== Model parameter statistics (per rank) =====
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - List of module groups with normalized names:
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.q_proj.lora_A.default.weight - trainable: 5,898,240 / 5,898,240 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.q_proj.lora_B.default.weight - trainable: 9,437,184 / 9,437,184 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.k_proj.lora_A.default.weight - trainable: 5,898,240 / 5,898,240 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.k_proj.lora_B.default.weight - trainable: 2,359,296 / 2,359,296 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.v_proj.lora_A.default.weight - trainable: 5,898,240 / 5,898,240 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.v_proj.lora_B.default.weight - trainable: 2,359,296 / 2,359,296 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.o_proj.lora_A.default.weight - trainable: 9,437,184 / 9,437,184 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.o_proj.lora_B.default.weight - trainable: 5,898,240 / 5,898,240 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.gate_proj.lora_A.default.weight - trainable: 5,898,240 / 5,898,240 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.gate_proj.lora_B.default.weight - trainable: 22,413,312 / 22,413,312 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.up_proj.lora_A.default.weight - trainable: 5,898,240 / 5,898,240 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.up_proj.lora_B.default.weight - trainable: 22,413,312 / 22,413,312 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.down_proj.lora_A.default.weight - trainable: 22,413,312 / 22,413,312 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.down_proj.lora_B.default.weight - trainable: 5,898,240 / 5,898,240 (100.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.embed_tokens.weight - trainable: 0 / 388,956,160 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.q_proj.base_layer.weight - trainable: 0 / 188,743,680 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.k_proj.base_layer.weight - trainable: 0 / 47,185,920 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.v_proj.base_layer.weight - trainable: 0 / 47,185,920 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.o_proj.base_layer.weight - trainable: 0 / 188,743,680 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.q_norm.weight - trainable: 0 / 4,608 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.self_attn.k_norm.weight - trainable: 0 / 4,608 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.gate_proj.base_layer.weight - trainable: 0 / 448,266,240 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.up_proj.base_layer.weight - trainable: 0 / 448,266,240 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.mlp.down_proj.base_layer.weight - trainable: 0 / 448,266,240 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.input_layernorm.weight - trainable: 0 / 92,160 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.layers.X.post_attention_layernorm.weight - trainable: 0 / 92,160 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   base_model.model.model.norm.weight - trainable: 0 / 2,560 (0.00%)
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - 
+===== Model parameter dtypes =====
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - Parameter dtypes breakdown:
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   torch.bfloat16  - total: 521,272,832 params, trainable: 132,120,576 (25.35%), memory: 994.25 MB
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats -   torch.uint8     - total: 1,816,657,920 params, trainable: 0 (0.00%), memory: 1.69 GB
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - Total parameter memory: 2.66 GB
+11/25/2026 17:51:04 - INFO - halo.callbacks.parameter_stats - ========================================
+
+
+  0%|          | 0/6 [00:00<?, ?it/s]11/25/2026 17:51:09 - WARNING - liger_kernel.backends.registry - Backend impl 'liger_kernel.ops.backends._ascend.rope' for op 'rope' could not be imported: ImportError: cannot import name 'tanh' from 'triton.language.math' (/usr/local/lib/python3.12/dist-packages/triton/language/math.py)
+11/25/2026 17:51:10 - WARNING - liger_kernel.backends.registry - Backend impl 'liger_kernel.ops.backends._ascend.cross_entropy' for op 'cross_entropy' could not be imported: ImportError: cannot import name 'tanh' from 'triton.language.math' (/usr/local/lib/python3.12/dist-packages/triton/language/math.py)
+
+ 17%|█▋        | 1/6 [01:04<05:24, 64.92s/it]
+                                             
+{'loss': '1.593', 'grad_norm': '3.578', 'learning_rate': '0', 'parallelism/dp_size': 1, 'num_unmasked_output_tokens_seen': 54858, 'num_attended_tokens_seen': '6.548e+04', 'entropy': '0.7394', 'mean_token_accuracy': '0.6574', 'epoch': '0.01329', 'num_input_tokens_seen': 65482, 'train_runtime': '64.99', 'train_tokens_per_second': '1008'}
+
+ 17%|█▋        | 1/6 [01:04<05:24, 64.92s/it]
+ 33%|███▎      | 2/6 [01:57<03:49, 57.37s/it]
+                                             
+{'loss': '1.865', 'grad_norm': '4.344', 'learning_rate': '3.125e-06', 'parallelism/dp_size': 1, 'num_unmasked_output_tokens_seen': 104248, 'num_attended_tokens_seen': '1.307e+05', 'entropy': '0.8007', 'mean_token_accuracy': '0.6149', 'epoch': '0.02658', 'num_input_tokens_seen': 130713, 'train_runtime': '117.1', 'train_tokens_per_second': '1116'}
+
+ 33%|███▎      | 2/6 [01:57<03:49, 57.37s/it]
+ 50%|█████     | 3/6 [02:49<02:45, 55.06s/it]
+                                             
+{'loss': '1.765', 'grad_norm': '4.094', 'learning_rate': '6.25e-06', 'parallelism/dp_size': 1, 'num_unmasked_output_tokens_seen': 155879, 'num_attended_tokens_seen': '1.961e+05', 'entropy': '0.7699', 'mean_token_accuracy': '0.6257', 'epoch': '0.03987', 'num_input_tokens_seen': 196084, 'train_runtime': '169.4', 'train_tokens_per_second': '1158', 'step_time_seconds': '52.31', 'avg_step_time_seconds': '52.31', 'step_tokens_per_second': '1250', 'avg_tokens_per_second': '1250', 'step_cluster_tokens_per_second': '1250', 'avg_cluster_tokens_per_second': '1250', 'step_data_wait_seconds': '0.0525', 'avg_data_wait_seconds': '0.0525', 'allocated_gb': '3.27', 'reserved_gb': '10.35', 'peak_allocated_gb': '7.76', 'training_peak_allocated_gb': '7.76'}
+
+ 50%|█████     | 3/6 [02:49<02:45, 55.06s/it]
+ 67%|██████▋   | 4/6 [03:42<01:48, 54.34s/it]
+                                             
+{'loss': '1.579', 'grad_norm': '3.844', 'learning_rate': '9.375e-06', 'parallelism/dp_size': 1, 'num_unmasked_output_tokens_seen': 205929, 'num_attended_tokens_seen': '2.616e+05', 'entropy': '0.7175', 'mean_token_accuracy': '0.6593', 'epoch': '0.05316', 'num_input_tokens_seen': 261584, 'train_runtime': '222.6', 'train_tokens_per_second': '1175', 'step_time_seconds': '53.23', 'avg_step_time_seconds': '52.77', 'step_tokens_per_second': '1231', 'avg_tokens_per_second': '1240', 'step_cluster_tokens_per_second': '1231', 'avg_cluster_tokens_per_second': '1240', 'step_data_wait_seconds': '0.1304', 'avg_data_wait_seconds': '0.0915', 'allocated_gb': '3.27', 'reserved_gb': '10.35', 'peak_allocated_gb': '7.76', 'training_peak_allocated_gb': '7.76'}
+
+ 67%|██████▋   | 4/6 [03:42<01:48, 54.34s/it]
+ 83%|████████▎ | 5/6 [04:35<00:53, 53.82s/it]
+                                             
+{'loss': '1.602', 'grad_norm': '3.562', 'learning_rate': '1.25e-05', 'parallelism/dp_size': 1, 'num_unmasked_output_tokens_seen': 259663, 'num_attended_tokens_seen': '3.262e+05', 'entropy': '0.7313', 'mean_token_accuracy': '0.6485', 'epoch': '0.06645', 'num_input_tokens_seen': 326167, 'train_runtime': '275.5', 'train_tokens_per_second': '1184', 'step_time_seconds': '52.91', 'avg_step_time_seconds': '52.82', 'step_tokens_per_second': '1221', 'avg_tokens_per_second': '1234', 'step_cluster_tokens_per_second': '1221', 'avg_cluster_tokens_per_second': '1234', 'step_data_wait_seconds': '0.0535', 'avg_data_wait_seconds': '0.0788', 'allocated_gb': '3.27', 'reserved_gb': '10.35', 'peak_allocated_gb': '7.76', 'training_peak_allocated_gb': '7.76'}
+
+ 83%|████████▎ | 5/6 [04:35<00:53, 53.82s/it]
+100%|██████████| 6/6 [05:28<00:00, 53.71s/it]
+                                             
+{'loss': '1.544', 'grad_norm': '3.469', 'learning_rate': '1.563e-05', 'parallelism/dp_size': 1, 'num_unmasked_output_tokens_seen': 308682, 'num_attended_tokens_seen': '3.914e+05', 'entropy': '0.7093', 'mean_token_accuracy': '0.6581', 'epoch': '0.07973', 'num_input_tokens_seen': 391403, 'train_runtime': '329', 'train_tokens_per_second': '1190', 'step_time_seconds': '53.5', 'avg_step_time_seconds': '52.99', 'step_tokens_per_second': '1219', 'avg_tokens_per_second': '1230', 'step_cluster_tokens_per_second': '1219', 'avg_cluster_tokens_per_second': '1230', 'step_data_wait_seconds': '0.0569', 'avg_data_wait_seconds': '0.0733', 'allocated_gb': '3.27', 'reserved_gb': '10.35', 'peak_allocated_gb': '7.76', 'training_peak_allocated_gb': '7.76'}
+
+100%|██████████| 6/6 [05:28<00:00, 53.71s/it][INFO|trainer.py:1975] 2026-11-25 17:56:33,741 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+                                             
+{'train_runtime': '329.1', 'train_samples_per_second': '0.292', 'train_steps_per_second': '0.018', 'train_loss': '1.658', 'parallelism/dp_size': 1, 'num_unmasked_output_tokens_seen': 308682, 'epoch': '0.07973', 'num_input_tokens_seen': 391403, 'step_time_seconds': '53.5', 'avg_step_time_seconds': '52.99', 'step_tokens_per_second': '1219', 'avg_tokens_per_second': '1230', 'step_cluster_tokens_per_second': '1219', 'avg_cluster_tokens_per_second': '1230', 'step_data_wait_seconds': '0.0569', 'avg_data_wait_seconds': '0.0733', 'allocated_gb': '3.27', 'reserved_gb': '10.35', 'peak_allocated_gb': '7.76', 'training_peak_allocated_gb': '7.76'}
+
+100%|██████████| 6/6 [05:29<00:00, 53.71s/it]
+100%|██████████| 6/6 [05:29<00:00, 54.84s/it]
+11/25/2026 17:56:33 - INFO - halo.entrypoints.script - SFT training completed successfully!
+[INFO|training_args.py:1809] 2026-11-25 17:50:47,889 >> PyTorch: setting up devices
