@@ -56,7 +56,7 @@ volume = modal.Volume.from_name("halo-small-gpu-check", create_if_missing=True)
 
 
 def halo_image(flavor: str) -> modal.Image:
-    # The base image's entrypoint only prints a banner.
+    # Clearing the entrypoint only keeps the base image's banner out of the logs.
     return (
         modal.Image.from_registry(f"public.ecr.aws/whitecircle/halo:{flavor}-{VERSION}")
         .entrypoint([])
